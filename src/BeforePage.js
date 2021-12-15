@@ -1,12 +1,28 @@
 import React, { useState } from "react";
 import "./BeforePage.css";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 function BeforePage() {
   const email_print = () => {
     const email_value = document.getElementById("email_input").value;
     alert(email_value);
   };
+
+  const StyledLink = styled(Link)`
+    // box-sizing: border-box;
+    // display: block;
+    // margin: 0 auto;
+    // text-align: center;
+    background-color: #e50815;
+    align-content: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 75px;
+    height: 35px;
+  `;
 
   const qnaContents = [
     {
@@ -25,56 +41,60 @@ function BeforePage() {
 
   return (
     <div>
-      <header>
-        <div id={"logo_div"} className={"header_div"}>
-          <img
-            id={"logo"}
-            src={
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/799px-Netflix_2015_logo.svg.png"
-            }
-            alt=""
-          />
-        </div>
-        <div className={"header_div"}></div>
-        <div className={"header_div"}></div>
-
-        <div id={"lang_div"} className={"header_div"}>
-          <select>
-            <option>한국어</option>
-            <option>영어</option>
-          </select>
-        </div>
-        <div id={"login_div"} className={"header_div"}>
-          <Link to="/UserSelect">
-            <button>login</button>
-          </Link>
-        </div>
-      </header>
-
       <div id={"main_1"}>
-        <div id={"_1_img"}>
+        <div id="_1_img">
           <img
             id={"main_1_img"}
             src={
-              "https://assets.nflxext.com/ffe/siteui/vlv3/03fdc4bf-72f6-4926-83a7-a76e6a1a5591/780e6f4e-6f56-4926-82f5-ee222fb056c0/KR-ko-20211115-popsignuptwoweeks-perspective_alpha_website_medium.jpg"
+              "https://assets.nflxext.com/ffe/siteui/vlv3/ddd4085b-8ed5-416a-9b80-5085784ba0e9/5e3ba062-2e50-4086-8d83-65bbe3c485c1/KR-ko-20211206-popsignuptwoweeks-perspective_alpha_website_large.jpg"
             }
             alt={"background_1"}
-            style={{ width: "99vw" }}
+            style={{ height: "930px" }}
           />
         </div>
+        <header id="Before_header">
+          <div id={"logo_div"} className={"header_div_B"}>
+            <img
+              id={"logo_B"}
+              src={
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/799px-Netflix_2015_logo.svg.png"
+              }
+              alt=""
+            />
+          </div>
+          <div className={"header_div_B"}></div>
+          <div id={"lang_div"} className={"header_div_B"}>
+            <select>
+              <option>한국어</option>
+              <option>영어</option>
+            </select>
+          </div>
+          <div id={"login_div"} className={"header_div_B"}>
+            <StyledLink to={"/UserSelect"}>
+              {" "}
+              <p>로그인</p>
+            </StyledLink>
+          </div>
+        </header>
 
         <div id={"_1_desc"} className={"desc_div"}>
-          <p className={"desc_title"} id={"main_title"}>
-            영화, TV 프로그램을
-            <br />
-            무제한으로.
+          <p
+            className={"desc_title"}
+            id={"main_title"}
+            style={{ fontWeight: 900 }}
+          >
+            영화와 시리즈를 무제한으로.
           </p>
           <br />
           <p className={"desc"} id={"main_desc"}>
             다양한 디바이스에서 시청하세요. 언제든 해지하실 수 있습니다.
           </p>
           <br />
-          <p className={"desc_lower"} id={"main_desc_lower"}>
+          <p
+            className={"desc_lower"}
+            id={"main_desc_lower"}
+            style={{ marginBottom: "20px" }}
+          >
             시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일
             주소를 입력하세요.
           </p>
@@ -181,6 +201,51 @@ function BeforePage() {
 
       <div id="main_6">
         <p className="desc_title">자주 묻는 질문</p>
+        <input type="radio" name="accordion" id="answer01" />
+        <label className="faq_question" for="answer01">
+          <p className="ques-title">넷플릭스란 무엇인가요?</p>
+        </label>
+        <div>
+          <p className="faq_answer desc">
+            넷플릭스는 각종 수상 경력에 빛나는 TV 프로그램, 영화, 애니메이션,
+            다큐멘터리 등 다양한 콘텐츠를 인터넷 연결이 가능한 수천 종의
+            디바이스에서 시청할 수 있는 스트리밍 서비스입니다.
+            <br />
+            <br />
+            저렴한 월 요금으로 일체의 광고 없이 원하는 시간에 원하는 만큼 즐길
+            수 있습니다. 무궁무진한 콘텐츠가 준비되어 있으며 매주 새로운 TV
+            프로그램과 영화가 제공됩니다.
+          </p>
+        </div>
+        <input type="radio" name="accordion" id="answer02" />
+        <label for="answer02" className="faq_question">
+          <p className="ques-title">넷플릭스 요금은 얼마인가요?</p>
+        </label>
+        <div>
+          <p className="faq_answer desc">
+            스마트폰, 태블릿, 스마트 TV, 노트북, 스트리밍 디바이스 등 다양한
+            디바이스에서 월정액 요금 하나로 넷플릭스를 시청하세요. 멤버십 요금은
+            월 9,500원부터 17,000원까지 다양합니다. 추가 비용이나 약정이
+            없습니다.
+          </p>
+        </div>
+        <input type="radio" name="accordion" id="answer03" />
+        <label for="answer03" className="faq_question">
+          <p className="ques-title">어디에서 시청할 수 있나요?</p>
+        </label>
+        <div>
+          <p className="faq_answer desc">
+            언제 어디서나 시청할 수 있습니다. 넷플릭스 계정으로 로그인하면
+            PC에서 netflix.com을 통해 바로 시청할 수 있으며, 인터넷이 연결되어
+            있고 넷플릭스 앱을 지원하는 디바이스(스마트 TV, 스마트폰, 태블릿,
+            스트리밍 미디어 플레이어, 게임 콘솔 등)에서도 언제든지 시청할 수
+            있습니다.
+            <br />
+            iOS, Android, Windows 10용 앱에서는 좋아하는 프로그램을 저장할 수도
+            있습니다. 저장 기능을 이용해 이동 중이나 인터넷에 연결할 수 없는
+            곳에서도 시청하세요. 넷플릭스는 어디서든 함께니까요.
+          </p>
+        </div>
 
         {/* <ul className="faq_list">
           <li className="faq_list_item what_is_netfilx">
