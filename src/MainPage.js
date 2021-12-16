@@ -15,8 +15,6 @@ function MainPage() {
     container_Carousel_Top.current.style.transform = `translateX(${nowX_top}vw)`;
   }, [nowX_hot, nowX_top]);
 
-  // useState 말고 useEffect를 이용해야할듯.
-
   const location = useLocation();
 
   const Nav = useNavigate();
@@ -212,7 +210,7 @@ function MainPage() {
 
   return (
     <>
-      <div style={{ color: "red", backgroundColor: "white" }}>
+      <div>
         <div className="main-full">
           <div className="top-video-div" style={{ height: "60vw" }}>
             <div className="top-video">
@@ -353,7 +351,7 @@ function MainPage() {
 
           <div className="hot-now-contents-div">
             <p className="content-title">넷플릭스 인기 컨텐츠</p>
-            <div className="Carousel_outbox" style={{ overflow: "hidden" }}>
+            <div className="Carousel_outbox">
               {/*캐러셀 외부 구현*/}
               <label
                 className="left_hot"
@@ -373,6 +371,7 @@ function MainPage() {
               </label>
               <div
                 className="hot-now-contents Carousel_inbox"
+                style={{ height: "240px" }}
                 ref={container_Carousel_Hot}
               >
                 {/*캐러셀 내부 구현*/}
@@ -390,10 +389,9 @@ function MainPage() {
           </div>
           <br />
           <br />
-          <br />
           <div className="top-10-div">
             <p className="content-title">오늘 한국의 TOP10 콘텐츠</p>
-            <div className="Carousel_outbox" style={{ overflow: "hidden" }}>
+            <div className="Carousel_outbox">
               <label
                 className="left"
                 onClick={() => {
@@ -412,6 +410,7 @@ function MainPage() {
               </label>
               <div
                 className="top-10-contents Carousel_inbox"
+                style={{ height: "370px" }}
                 ref={container_Carousel_Top}
               >
                 {top10Contents.map((Top10Content) => (

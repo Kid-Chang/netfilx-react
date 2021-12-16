@@ -10,18 +10,12 @@ function BeforePage() {
   };
 
   const StyledLink = styled(Link)`
-    // box-sizing: border-box;
-    // display: block;
-    // margin: 0 auto;
-    // text-align: center;
     background-color: #e50815;
-    align-content: center;
     margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     width: 75px;
     height: 35px;
+    margin-top: 10%;
+    border-radius: 5px;
   `;
 
   const qnaContents = [
@@ -71,8 +65,7 @@ function BeforePage() {
           </div>
           <div id={"login_div"} className={"header_div_B"}>
             <StyledLink to={"/UserSelect"}>
-              {" "}
-              <p>로그인</p>
+              <p style={{ marginTop: "15%", textAlign: "center" }}>로그인</p>
             </StyledLink>
           </div>
         </header>
@@ -121,7 +114,7 @@ function BeforePage() {
               }}
               box-sizing="border-box"
             >
-              시작하기{" "}
+              시작하기
             </button>
           </form>
         </div>

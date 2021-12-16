@@ -139,10 +139,7 @@ a { text-decoration:none }
 .hot-now-contents, .top-10-contents {
 	display: flex;
 	width:100%;
-	overflow-y: hidden;
-	overflow-x:scroll;
-	white-space: nowrap;
-	
+	overflow-x:hidden;
 }
 
 .hot-now-contents::-webkit-scrollbar, .top-10-contents::-webkit-scrollbar {
@@ -172,38 +169,51 @@ a { text-decoration:none }
     background-color: wheat;
 }
 
-
 /* //// */
 .Carousel_inbox{
+	top: 100px;
     width: 300vw;
     transition: transform 0.5s;
+	overflow-x: hidden;
+	/* height: 230px; */
+	/* justify-content: center; */
+	align-items: center;
 }
+
 .Carousel_outbox{
+	/* height: 300px; */
 	position:relative;
+	overflow-x: hidden;
 }
+
 label[class^=left]{
     position: absolute;
     z-index: 10;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
     padding: 10px;
     cursor: pointer;
     color: white;
     font-weight: 900;
-	background-color: gray
+	background-color: gray;
+	height: 180px;
     ;
 }
 
 label[class^=right]{
     position: absolute;
     z-index: 10;
-    top: 45%;
+	height: 180px;
+    top: 50%;
     right: 10px;
     transform: translateY(-50%);
     padding: 10px;
     cursor: pointer;
     color: white;
     font-weight: 900;
-	background-color: gray
+	background-color: gray;
 }
 
+.hot-now-contents-div{
+	overflow-x: hidden;
+}
