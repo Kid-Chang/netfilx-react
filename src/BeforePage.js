@@ -133,7 +133,7 @@ function BeforePage() {
           <img
             id="main_2_img"
             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
-            style={{ width: "40vw" }}
+            // style={{ width: "40vw" }}
             alt=""
           />
         </div>
@@ -143,7 +143,7 @@ function BeforePage() {
           <img
             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
             alt=""
-            style={{ width: "40vw" }}
+            // style={{ width: "40vw" }}
           />
         </div>
         <div id="_3_desc" className="desc_div">
@@ -166,7 +166,7 @@ function BeforePage() {
         <div id="4_img" className="before_imgs">
           <img
             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
-            style={{ width: "40vw" }}
+            // style={{ width: "40vw" }}
             alt=""
           />
         </div>
@@ -175,7 +175,7 @@ function BeforePage() {
         <div id="5_img" className="before_imgs">
           <img
             src="https://occ-0-2218-1361.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABTyynLTvOBU46RmBnCIPyjAryrXCZKImpoXdp7Mz54jVGKnBQ1X84bzR-3vtD-RA4uu2b1FjrDgfxE6KElG14WAXW19X.png?r=acf"
-            style={{ width: "40vw" }}
+            // style={{ width: "40vw" }}
             alt=""
           />
         </div>

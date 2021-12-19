@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const Top10Layout = ({ index, rank, src, title }) => {
+function VidItemLayout({ index, src, title }) {
   const element = useRef();
   const zoomIn = () => {
     // console.log("it's work");
@@ -16,18 +16,17 @@ const Top10Layout = ({ index, rank, src, title }) => {
   };
 
   return (
-    <div className={`content${index} content-10s`}>
-      {rank}
+    <div className={`content${index}`}>
       <img
-        src={src}
-        alt=""
         ref={element}
         onMouseEnter={zoomIn}
         onMouseLeave={zoomOut}
-        style={{ height: "180px" }}
+        src={src}
+        alt=""
+        style={{ height: "140px" }}
       />
     </div>
   );
-};
+}
 
-export default Top10Layout;
+export default VidItemLayout;

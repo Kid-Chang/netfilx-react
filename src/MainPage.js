@@ -3,6 +3,7 @@ import "./MainPage.css";
 import Top10Layout from "./Top10Layout";
 import HotItemLayout from "./HotItemLayout";
 import { useLocation, useNavigate } from "react-router";
+import VidItemLayout from "./VidItemLayout";
 
 function MainPage() {
   const container_Carousel_Hot = useRef();
@@ -212,14 +213,14 @@ function MainPage() {
     <>
       <div>
         <div className="main-full">
-          <div className="top-video-div" style={{ height: "60vw" }}>
+          <div className="top-video-div" style={{ height: "40vw" }}>
             <div className="top-video">
-              <img
+              {/* <img
                 id="top-video-vid"
                 src="https://occ-0-993-325.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABZ69OBwRoR4HTLLWfIgOB_bg7N5kL3k7RdcVYDxAwLXm9s36AW9YMvtg3MfEAIivc1WnMlpBSHqwNV_hz7Pkl15djfUi.webp?r=e04"
                 alt=""
                 style={{ width: "98.5vw" }}
-              />
+              /> */}
               <header id="navigater">
                 <div className="nav-logo">
                   <img
@@ -348,15 +349,55 @@ function MainPage() {
               </div>
             </div>
           </div>
-
+          <div className="top-10-div">
+            <p className="content-title">오늘 한국의 TOP10 콘텐츠</p>
+            <div className="Carousel_outbox">
+              <label
+                className="left"
+                onClick={() => {
+                  nowX_top < 0
+                    ? setNowX_top(nowX_top + 20)
+                    : setNowX_top(nowX_top);
+                }}
+              >
+                left
+              </label>
+              <label
+                className="right"
+                onClick={() => {
+                  setNowX_top(nowX_top - 20);
+                }}
+              >
+                right
+              </label>
+              <div
+                className="top-10-contents Carousel_inbox"
+                style={{ height: "230px" }}
+                ref={container_Carousel_Top}
+              >
+                {top10Contents.map((Top10Content) => (
+                  <Top10Layout
+                    rank={Top10Content.rank}
+                    index={Top10Content.index}
+                    src={Top10Content.src}
+                    title={Top10Content.title}
+                    key={Top10Content.index}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
           <div className="hot-now-contents-div">
-            <p className="content-title">넷플릭스 인기 컨텐츠</p>
+            <p className="content-title">지금 뜨는 컨텐츠</p>
             <div className="Carousel_outbox">
               {/*캐러셀 외부 구현*/}
               <label
                 className="left_hot"
                 onClick={() => {
-                  setNowX_hot(nowX_hot + 20);
+                  console.log({ nowX_hot });
+                  nowX_hot < 0
+                    ? setNowX_hot(nowX_hot + 20)
+                    : setNowX_hot(nowX_hot);
                 }}
               >
                 left
@@ -371,7 +412,7 @@ function MainPage() {
               </label>
               <div
                 className="hot-now-contents Carousel_inbox"
-                style={{ height: "240px" }}
+                style={{ height: "190px" }}
                 ref={container_Carousel_Hot}
               >
                 {/*캐러셀 내부 구현*/}
@@ -389,42 +430,6 @@ function MainPage() {
           </div>
           <br />
           <br />
-          <div className="top-10-div">
-            <p className="content-title">오늘 한국의 TOP10 콘텐츠</p>
-            <div className="Carousel_outbox">
-              <label
-                className="left"
-                onClick={() => {
-                  setNowX_top(nowX_top + 20);
-                }}
-              >
-                left
-              </label>
-              <label
-                className="right"
-                onClick={() => {
-                  setNowX_top(nowX_top - 20);
-                }}
-              >
-                right
-              </label>
-              <div
-                className="top-10-contents Carousel_inbox"
-                style={{ height: "370px" }}
-                ref={container_Carousel_Top}
-              >
-                {top10Contents.map((Top10Content) => (
-                  <Top10Layout
-                    rank={Top10Content.rank}
-                    index={Top10Content.index}
-                    src={Top10Content.src}
-                    title={Top10Content.title}
-                    key={Top10Content.index}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </>

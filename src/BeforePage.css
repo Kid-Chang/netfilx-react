@@ -2,7 +2,7 @@
 /* #이 아이디  .이 클래스 */
 div{
     /* border: 1px solid black; */
-    background-color: black;
+    /* background-color: black; */
 }
 
 
@@ -15,6 +15,7 @@ div{
     flex-basis: 0;
     position: relative;
 }
+
 header div{
     background-color: rgba(255, 255, 255, 0);
 }
@@ -22,15 +23,11 @@ header div{
 #main_1_img{
     position: absolute;
     top:-10%;
-    
-
 }
 
 #logo_B{
-    height: 45px;
+    height: 40px;
     margin-top: 13px;
-    
-
 }
 
 
@@ -86,6 +83,7 @@ p{
 .desc_title{
     font-size: 50px;
     line-height:120%;
+    font-weight: 900;
 }
 .desc{
     font-size: 26px;
@@ -148,7 +146,9 @@ p{
     width: 845px;    
 }
 .footer_box{
-    padding: 100px 300px 100px 300px;
+    /* padding: 100px 300px 100px 300px; */
+    margin-left: 8vw;
+    margin-top: 3vw;
     box-sizing: border-box;
 }
 .footer_box_ul{
@@ -156,13 +156,19 @@ p{
     display: grid;
     grid-template-columns:repeat(4, 1fr);
     grid-gap: 20px;
+    
 }
+
 
 
 .before_imgs{
     display: flex;
     align-items: center;
 }
+.before_imgs img{
+    width: 40vw;
+}
+
 
 input[id*="answer"] {
     display: none;
@@ -215,4 +221,83 @@ input[id*="answer"]:checked + label + div {
 .login_div + p{
     text-align: center;
     color: black;
+}
+
+@media screen and (max-width:800px){
+    #main_title{
+        font-size: 3rem;
+    }
+    #main_desc{
+        font-size: 1.5rem;
+    }
+    .header_div_B:nth-child(1){flex-grow: 4;}
+    .header_div_B:nth-child(2){flex-grow: 7;}
+    .header_div_B:nth-child(3){flex-grow: 0;}
+    .header_div_B:nth-child(4){flex-grow: 3;}
+
+    #logo_B{
+    margin-left: 5vw;
+    height: 30px;
+    }
+
+    #_1_desc{
+        width: 80vw;
+    }
+
+    #main_2{
+        flex-direction: column;
+    }
+    #main_3{
+        flex-direction: column;
+    }
+    #main_4{
+        flex-direction: column;
+    }
+    #main_5{
+        flex-direction: column;
+    }
+    .faq_question{
+        width: 70vw;
+        /* align-items: center; */
+    }
+    .faq_question p{
+        font-size: 1.5rem;
+        width: 70vw;
+    }
+    .faq_question ~div{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .faq_question ~ div p{
+        font-size: 1.3rem;
+        width: 73vw;
+        line-height:1.5rem ;
+    }
+
+    .ques-title{
+        margin-top: 4vh;
+    }
+    .before_imgs{
+        display: flex;
+        justify-content: center;
+    }
+    .before_imgs img{
+        width: 90vw;
+    }
+
+    #main_3{
+        display:flex;
+        flex-direction: column-reverse; 
+    }
+    #main_5{
+        display:flex;
+        flex-direction: column-reverse; 
+    }
+    .footer_box_ul{
+        width: 80vw;
+        grid-template-columns:repeat(3, 1fr);
+
+    }
 }

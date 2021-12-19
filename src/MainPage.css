@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: black;
+	/* background-color: black; */
 }
 ol, ul {
 	list-style: none;
@@ -110,7 +110,7 @@ a { text-decoration:none }
 }
 
 .top-video{
-	position: relative;
+	position: relative;	
 }
 #top-video-logo{
 	position: absolute;
@@ -119,10 +119,18 @@ a { text-decoration:none }
 }
 #top-video-vid{
 	position:absolute;
+
 }
+.top-video-div{
+	background: linear-gradient(to bottom, rgba(0,0,0,0), black),
+	url(https://occ-0-993-325.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABZ69OBwRoR4HTLLWfIgOB_bg7N5kL3k7RdcVYDxAwLXm9s36AW9YMvtg3MfEAIivc1WnMlpBSHqwNV_hz7Pkl15djfUi.webp?r=e04);
+	background-size: 100vw;
+	
+}
+
 #top-video-desc{
 	position: absolute;
-	top: 450px;
+	top: 430px;
 	left: 70px;
 	font-size: 20px;
 	width: 520px;
@@ -138,7 +146,7 @@ a { text-decoration:none }
 }
 .hot-now-contents, .top-10-contents {
 	display: flex;
-	width:100%;
+	/* width:10%; */
 	overflow-x:hidden;
 }
 
@@ -175,7 +183,7 @@ a { text-decoration:none }
     width: 300vw;
     transition: transform 0.5s;
 	overflow-x: hidden;
-	/* height: 230px; */
+	/* height: 130px; */
 	/* justify-content: center; */
 	align-items: center;
 }
@@ -196,14 +204,14 @@ label[class^=left]{
     color: white;
     font-weight: 900;
 	background-color: gray;
-	height: 180px;
+	height: 140px;
     ;
 }
 
 label[class^=right]{
     position: absolute;
     z-index: 10;
-	height: 180px;
+	height: 140px;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
