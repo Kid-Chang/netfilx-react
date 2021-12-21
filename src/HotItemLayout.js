@@ -4,9 +4,9 @@ function HotItemLayout({ index, src, title }) {
   const element = useRef();
   const zoomIn = () => {
     // console.log("it's work");
-    element.current.style.transition = "all 0.5s";
+    element.current.style.transition = "all 0.3s";
     element.current.style.transform = "scale(1.2)";
-    element.current.style.zIndex = 20;
+    element.current.style.transitionDelay = "0.5s";
   };
 
   const zoomOut = () => {

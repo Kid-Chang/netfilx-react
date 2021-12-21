@@ -2,11 +2,11 @@ import { useRef } from "react";
 
 function VidItemLayout({ index, src, title }) {
   const element = useRef();
-  const zoomIn = () => {
+  const zoomInPunch = () => {
     // console.log("it's work");
     element.current.style.transition = "all 0.5s";
     element.current.style.transform = "scale(1.2)";
-    element.current.style.zIndex = 20;
+    element.current.style.transitionDelay = "0.5s";
   };
 
   const zoomOut = () => {
@@ -16,10 +16,10 @@ function VidItemLayout({ index, src, title }) {
   };
 
   return (
-    <div className={`content${index}`}>
+    <div className={`content${index} vid-content`}>
       <img
         ref={element}
-        onMouseEnter={zoomIn}
+        onMouseEnter={zoomInPunch}
         onMouseLeave={zoomOut}
         src={src}
         alt=""

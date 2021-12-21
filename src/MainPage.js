@@ -3,18 +3,29 @@ import "./MainPage.css";
 import Top10Layout from "./Top10Layout";
 import HotItemLayout from "./HotItemLayout";
 import { useLocation, useNavigate } from "react-router";
-import VidItemLayout from "./VidItemLayout";
+import VidItemLayout from "./itemLayoutComp/VidItemLayout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckSquare, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { faSquare } from "@fortawesome/free-regular-svg-icons";
 
 function MainPage() {
   const container_Carousel_Hot = useRef();
   const container_Carousel_Top = useRef();
+  const container_Carousel_Blockbuster = useRef();
+
   const [nowX_hot, setNowX_hot] = useState(0);
   const [nowX_top, setNowX_top] = useState(0);
+  const [nowX_blockbuster, setNowX_blockbuster] = useState(0);
+
+  const [top10Contents, setTop10Contents] = useState([]);
+  const [hotNowContents, setHotNowContents] = useState([]);
+  const [blockbusterContents, setBlockbusterContents] = useState([]);
 
   useEffect(() => {
     container_Carousel_Hot.current.style.transform = `translateX(${nowX_hot}vw)`;
     container_Carousel_Top.current.style.transform = `translateX(${nowX_top}vw)`;
-  }, [nowX_hot, nowX_top]);
+    container_Carousel_Blockbuster.current.style.transform = `translateX(${nowX_blockbuster}vw)`;
+  }, [nowX_hot, nowX_top, nowX_blockbuster]);
 
   const location = useLocation();
 
@@ -32,6 +43,35 @@ function MainPage() {
   }, []);
 
   setTimeout(() => {
+    setBlockbusterContents([
+      {
+        index: "1",
+        src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcierLxhc-d_iIUgnGOqUU_BTLgkSPcJeLgsNMYq3MmhEkYIMuoKXAddGYkP6f5vWQPIZUm9_s0wBcQvaGqLZEywtuBK4M8m9tS_hNe8O2b91lVP_uTMjB-3rn6OjxAPi5Q9KsCV0pbnAyAP6naMUaKuDVQAGshmoL7MOthwXoiiVy7UXBhVgos.jpg?r=cbd",
+        title: "아케인",
+      },
+      {
+        index: "2",
+        src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVP1nhY92OjXJ2236yl0-GUVJK_jUzSpcJUF7VIMTD6RhjFGAzavpHlbwcWVV1rCS5NEoDSDPXLQYcvAP3XbgBHEhMpoeAR1xA_zCNUktmFrfgO4SgP7kyXTl12u7fH4q_XzjejpFHrWlw7Eye_9dXOh7e3kaGmfWPEvTajHXwbUZD3WNPsUU5M.jpg?r=b45",
+        title: "마이네임",
+      },
+      {
+        src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQw4x67ePluiVqxJDubRlwPiu-X8prhErG1xVicrPhlZbExfiw4U3QVS9rKHtuPOR3vAGUPbTFMQsSGC_52VsV1LJeaFVrHdbEdCWsSP-XZgkNpRuva8PNYVU9sde9fjRr4jYqQzYAZsJuZhitL2nMzfImE.webp?r=ebb",
+        title: "싱크홀",
+      },
+      {
+        src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbRimFoshBDFc5ebs3TXbgMP9qctTPHLzPQ7O2i2LLWdBz7zFhO9Ms5cPZPWmF133AYpF1aDId1zPUClOgQLqs7pMUA.webp?r=c75",
+        title: "프리즌 브레이크",
+      },
+      {
+        src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABROzB4UrA2hplCOUBtwplePj2-vinbbYmuRMYNrkil00kryIpTfoozQWOVzviATkJjK9bxg___XFZbPBWjL3uaZkV30HUtWCCltF9ujagxO2aPlZaHNG3a7pCDAZ.jpg?r=f37",
+        title: "로스트 인 스페이스",
+      },
+      {
+        src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeidbTI7C_3mB-Fl3gIFnKAGd6awhF23c5e8KMWxY47irfDBZ4AGdwTvGpYs1ne0jiqIMxSSJRhDNQyXYNebutYaV5IrnWY0TtzRCpsnjg0-vG5BI6b7OjNP_EJK.jpg?r=229",
+        title: "카우보이 비밥",
+      },
+    ]);
+
     setTop10Contents([
       {
         index: 1,
@@ -205,10 +245,6 @@ function MainPage() {
     ]);
   }, 2000);
 
-  const [top10Contents, setTop10Contents] = useState([]);
-
-  const [hotNowContents, setHotNowContents] = useState([]);
-
   return (
     <>
       <div>
@@ -262,25 +298,21 @@ function MainPage() {
                   </ul>
                 </div>
                 <div className="nav-search-admin">
-                  <div className="nav-search">
-                    <button>
-                      <img
-                        src={"img/pngegg.png"}
-                        alt=""
-                        style={{ height: "30px" }}
-                      />
-                    </button>
+                  <div className="nav-search menu-item">
+                    <img
+                      src={"img/pngegg.png"}
+                      alt=""
+                      style={{ height: "40px" }}
+                    />
                   </div>
-                  <div className="nav-alarm">
-                    <button>
-                      <img
-                        src={"img/bell.png"}
-                        alt=""
-                        style={{ height: "30px" }}
-                      />
-                    </button>
+                  <div className="nav-alarm menu-item">
+                    <img
+                      src={"img/bell.png"}
+                      alt=""
+                      style={{ height: "40px" }}
+                    />
                   </div>
-                  <div className="nav-user">
+                  <div className="nav-user menu-item">
                     <img
                       src={location.state}
                       width={"50vw"}
@@ -311,65 +343,36 @@ function MainPage() {
                 <div
                   style={{ height: "20px", backgroundColor: "rgba(0,0,0,0)" }}
                 ></div>
-
-                <button class="vid-play">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="Hawkins-Icon Hawkins-Icon-Standard"
-                  >
-                    <path
-                      d="M3 2.69127C3 1.93067 3.81547 1.44851 4.48192 1.81506L21.4069 11.1238C22.0977 11.5037 22.0977 12.4963 21.4069 12.8762L4.48192 22.1849C3.81546 22.5515 3 22.0693 3 21.3087V2.69127Z"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-                  재생
-                </button>
-                <button class="vid-info">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="Hawkins-Icon Hawkins-Icon-Standard"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM13 10V18H11V10H13ZM12 8.5C12.8284 8.5 13.5 7.82843 13.5 7C13.5 6.17157 12.8284 5.5 12 5.5C11.1716 5.5 10.5 6.17157 10.5 7C10.5 7.82843 11.1716 8.5 12 8.5Z"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-                  상세정보
-                </button>
+                <div className="vid-buttons">
+                  <div class="vid-play-button">
+                    <i class="fas fa-play"></i>
+                    재생
+                  </div>
+                  <div class="vid-info-button">
+                    <i class="fal fa-info-circle" />
+                    상세정보
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div className="top-10-div">
             <p className="content-title">오늘 한국의 TOP10 콘텐츠</p>
             <div className="Carousel_outbox">
-              <label
-                className="left"
+              <i
+                class="left fas fa-chevron-left fa-3x"
                 onClick={() => {
                   nowX_top < 0
                     ? setNowX_top(nowX_top + 20)
                     : setNowX_top(nowX_top);
                 }}
-              >
-                left
-              </label>
-              <label
-                className="right"
+              ></i>
+              <i
+                class="right fas fa-chevron-right fa-3x"
                 onClick={() => {
                   setNowX_top(nowX_top - 20);
                 }}
-              >
-                right
-              </label>
+              ></i>
               <div
                 className="top-10-contents Carousel_inbox"
                 style={{ height: "230px" }}
@@ -391,25 +394,21 @@ function MainPage() {
             <p className="content-title">지금 뜨는 컨텐츠</p>
             <div className="Carousel_outbox">
               {/*캐러셀 외부 구현*/}
-              <label
-                className="left_hot"
+              <i
+                class="left_hot fas fa-chevron-left fa-3x"
                 onClick={() => {
-                  console.log({ nowX_hot });
                   nowX_hot < 0
                     ? setNowX_hot(nowX_hot + 20)
                     : setNowX_hot(nowX_hot);
                 }}
-              >
-                left
-              </label>
-              <label
-                className="right_hot"
+              ></i>
+              <i
+                class="right_hot fas fa-chevron-right fa-3x"
                 onClick={() => {
                   setNowX_hot(nowX_hot - 20);
                 }}
-              >
-                right
-              </label>
+              ></i>
+
               <div
                 className="hot-now-contents Carousel_inbox"
                 style={{ height: "190px" }}
@@ -423,6 +422,41 @@ function MainPage() {
                     src={HotNowContent.src}
                     title={HotNowContent.title}
                     key={HotNowContent.index}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="blockbuster-contents-div">
+            <p className="content-title">블록버스터 영화</p>
+            <div className="Carousel_outbox">
+              {/*캐러셀 외부 구현*/}
+              <i
+                class="left_hot fas fa-chevron-left fa-3x"
+                onClick={() => {
+                  nowX_blockbuster < 0
+                    ? setNowX_blockbuster(nowX_blockbuster + 20)
+                    : setNowX_blockbuster(nowX_blockbuster);
+                }}
+              ></i>
+              <i
+                class="right_hot fas fa-chevron-right fa-3x"
+                onClick={() => {
+                  setNowX_blockbuster(nowX_blockbuster - 20);
+                }}
+              ></i>
+
+              <div
+                className="Carousel_inbox slider vid_slider"
+                style={{ height: "190px" }}
+                ref={container_Carousel_Blockbuster}
+              >
+                {blockbusterContents.map((blockContent) => (
+                  <VidItemLayout
+                    index={blockContent.index}
+                    src={blockContent.src}
+                    title={blockContent.title}
+                    key={blockContent.index}
                   />
                 ))}
               </div>
