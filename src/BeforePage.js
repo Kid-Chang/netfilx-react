@@ -3,20 +3,20 @@ import "./BeforePage.css";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+const StyledLink = styled(Link)`
+  background-color: #e50815;
+  margin: 0 auto;
+  width: 75px;
+  height: 35px;
+  margin-top: 10%;
+  border-radius: 5px;
+`;
+
 function BeforePage() {
   const email_print = () => {
     const email_value = document.getElementById("email_input").value;
     alert(email_value);
   };
-
-  const StyledLink = styled(Link)`
-    background-color: #e50815;
-    margin: 0 auto;
-    width: 75px;
-    height: 35px;
-    margin-top: 10%;
-    border-radius: 5px;
-  `;
 
   const qnaContents = [
     {
