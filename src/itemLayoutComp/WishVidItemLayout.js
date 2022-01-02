@@ -28,7 +28,7 @@ const PreviewInnerContainer = styled.div`
     }
 `;
 
-function VidItemLayout({
+function WishVidItemLayout({
     index,
     src,
     title,
@@ -68,10 +68,6 @@ function VidItemLayout({
         console.log("del wish");
         setWishCheck(false);
         dispatch(delWishAction({ title: title }));
-    };
-    const viewMoreClick = () => {
-        setViewMoreCheckOn(true);
-        dispatch(loginAction({ src: src, title: title, desc: desc }));
     };
 
     const zoomOut = () => {
@@ -138,12 +134,6 @@ function VidItemLayout({
                         <div>
                             <i class="far fa-thumbs-down"></i>
                         </div>
-                        <div style={{ marginLeft: "65px" }}>
-                            <i
-                                class="fas fa-chevron-down"
-                                onClick={viewMoreClick}
-                            ></i>
-                        </div>
                     </PreviewInnerContainer>
                     <div
                         style={{
@@ -160,4 +150,4 @@ function VidItemLayout({
     );
 }
 
-export default VidItemLayout;
+export default WishVidItemLayout;
