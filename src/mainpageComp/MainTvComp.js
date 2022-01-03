@@ -44,60 +44,80 @@ function MainTvComp() {
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABf_5K8OTBMrZQcpfCcYWXdxD3UE5XKOxcIq8mvX7eBIOCEAw2JD1U4dc54RS1HNQZN9VcB4PDv8R5z1p0Mxe9fdJR-sbjkf2ElV39wbWiku2Po3rObpd6n9-sLDA.jpg?r=b45",
                 title: "마이네임",
                 desc: "격투",
+                wished: false,
+                ageAndSeason: "18 시즌 1개",
             },
             {
                 index: "2",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcAfVwM_UQ-8HLReFHoCTqhd97pa10An2t-LgSrfYXjvWuJHm86bj-hmBK5aXfs9pOdBInqGJtaJfNj8sOdy1gpi9q7DpflOYyRE9iU6ril3eRK_tF2RHGUMk2Dy0P9-1c5ROXU3oPxEtFWGm5qaCN7Axy3bKNbR6nVhvgPVD6wTBezyWFm6B_psbN9T0yxjxAcmBPCPtE-memGlOHUNLUam.jpg?r=15d",
                 title: "에밀리 파리에 가다",
                 desc: "뭘까이건",
+                wished: false,
+                ageAndSeason: "12 시즌 2개",
             },
             {
                 index: "3",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdLz78qXJWNiie-2lf1foN5Z98ZQ-0hmUNj15KIMMckgxRQZQVjchx1FhhESueojKCjUhlAdJDGWK4SU2riZQ4a3E7sc1ol335Xlksk-X378lU9rHeUMKkuv_gWv.jpg?r=157",
                 title: "종이의 집",
                 desc: "인기짱",
+                wished: false,
+                ageAndSeason: "18 시즌 5개",
             },
             {
                 index: "4",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABT_bVcdgbT53vxz33vp5V1zSNvQ2n2BfjhUuAWHaOq3_i-EgjP_6_5rzxC_aRMGJ3V_3yNi1RdAd7CJMCUFvPVNUudCQ4n-VghpHuQLtVYRvMmocRhvZIcxQyWIg.jpg?r=62a",
                 title: "마블 아이언피스트",
                 desc: "마.블.",
+                wished: false,
+                ageAndSeason: "18 시즌 2개",
             },
             {
                 index: "5",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcxDyYqsi0_vUDEb593aBMkY5l_wHGwQkCnuJqVOEoloeRLs8H5XI7IC57lC6Dj-pPOv-0x_dXVGOru8YVzVNmINAOs.webp?r=43c",
                 title: "플래시",
                 desc: "디.씨.",
+                wished: false,
+                ageAndSeason: "18 시즌 5개",
             },
             {
                 index: "6",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXrQ1BQrp6M3VY1jTFEMlNgCOX3pAYBA8ScFSvJQqJpTvviEZ574oScpRJBApsvzriao8rpAeisWVYsCdA-J9aCBSyTJN35LU7JafNaT746TTsitvLYJWYJ8pluDe5cdFhJ8uutyuQzychH6I-ejRmoXXLDnq2_qWoJQqlQq0Y15FYr1hqLRkMj8KUwu.webp?r=831",
                 title: "그해 우리는",
                 desc: "로맨스",
+                wished: false,
+                ageAndSeason: "전체이용가 시즌 2개",
             },
             {
                 index: "7",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZjS94Q--6oi11hLJhJo2RhY8z-rJMTBfMlM6ScrtNnPc4zpiNWqdskdA5S0APnDMpOR6Xwvi735lZNHhCyqc8UZXojfs8eDyZBKqglzDmFetP0j6WPmK6obZihN.jpg?r=08a",
                 title: "로스트 인 스페이스",
                 desc: "SF",
+                wished: false,
+                ageAndSeason: "15 시즌 2개",
             },
             {
                 index: "8",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRdVd6vHTHsyEQc59DfUhnFjpIHQ_2cLnwLcAsogjTNANsN_EH9ih-DeFgYlleyV4rcmKX1B9q9aUsasZ131rf0lqlQ2wWSkJ19luIRArkpWRarabNWD5Hd7rh4WOAbRQbn4gHjo-RTfpkdSScvObp9E--qtKWq-0x8vD_jGLff2qW9XRdku9LnhMRRr.webp?r=452",
                 title: "불가살",
                 desc: "괴이",
+                wished: false,
+                ageAndSeason: "18 시즌 1개",
             },
             {
                 index: "8",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABR0LdJzo0XvyB23PuEWfclx9FZVlLu-YtkX55SUJ9mIiEY2I7yIayN6tBT-RLYFKhh59eZb6SL-bE-QkklN-2-p3RJdnyOQmfKUbDEsik6afmKS9W3-IfN9z9kq3.jpg?r=369",
                 title: "더블타겟",
                 desc: "첩보",
+                wished: false,
+                ageAndSeason: "18 시즌 1개",
             },
             {
                 index: "10",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcWFB8Qh3uQ4n_mhGVxMp0EyPbEfRhaZf1nypV7N33IwfK4I1eIJ4WgcPpeAuEynLBlSJPtL-4EFjI2PYxVTTUo037o_A0wU5WfBgE8xn2N585b5l2rLfy7ZKI_Hp-zqVPFCtgNkQ6A5e7VYcaEHjA7gDLlPhIvNVKMG4Dq9VMiDpOopm2NkeW03Xrkh1Qs3SGEIyGzAUSDsVHi1BNmf3htw.jpg?r=788",
                 title: "솔로지옥",
                 desc: "달달",
+                wished: false,
+                ageAndSeason: "18 시즌 1개",
             },
         ]);
 
@@ -369,7 +389,7 @@ function MainTvComp() {
                 desc: "이건 뭘까",
             },
         ]);
-    }, 2000);
+    }, 200);
 
     return (
         <div>

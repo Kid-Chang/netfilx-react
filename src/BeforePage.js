@@ -12,8 +12,28 @@ const StyledLink = styled(Link)`
     border-radius: 5px;
 `;
 
+const LangOptionStyle = styled.div`
+    border: 2px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
+    color: white;
+    width: 84px;
+    height: 36px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 15px;
+    & > select {
+        background-color: black;
+        color: white;
+        border: 0;
+    }
+`;
+
 function BeforePage() {
-    const email_print = () => {
+    const email_print = (e) => {
+        e.preventDefault();
         const email_value = document.getElementById("email_input").value;
         alert(email_value);
     };
@@ -36,8 +56,15 @@ function BeforePage() {
     return (
         <div>
             <div id={"main_1"}>
-                <div id="_1_img">
-                    <img
+                <div
+                    id="_1_img"
+                    style={{
+                        height: "700px",
+                        width: "100vw",
+                        position: "absolute",
+                    }}
+                >
+                    {/* <img
                         id={"main_1_img"}
                         src={
                             "https://assets.nflxext.com/ffe/siteui/vlv3/ddd4085b-8ed5-416a-9b80-5085784ba0e9/5e3ba062-2e50-4086-8d83-65bbe3c485c1/KR-ko-20211206-popsignuptwoweeks-perspective_alpha_website_large.jpg"
@@ -47,7 +74,7 @@ function BeforePage() {
                             // height: "930px",
                             width: "100vw",
                         }}
-                    />
+                    /> */}
                 </div>
                 <header id="Before_header">
                     <div id={"logo_div"} className={"header_div_B"}>
@@ -60,17 +87,18 @@ function BeforePage() {
                         />
                     </div>
                     <div className={"header_div_B"}></div>
-                    <div id={"lang_div"} className={"header_div_B"}>
+                    <LangOptionStyle id={"lang_div"} className={"header_div_B"}>
+                        <i class="fas fa-globe"></i>
                         <select>
                             <option>한국어</option>
                             <option>영어</option>
                         </select>
-                    </div>
+                    </LangOptionStyle>
                     <div id={"login_div"} className={"header_div_B"}>
                         <StyledLink to={"/UserSelect"}>
                             <p
                                 style={{
-                                    marginTop: "15%",
+                                    marginTop: "10%",
                                     textAlign: "center",
                                 }}
                             >
@@ -84,12 +112,16 @@ function BeforePage() {
                     <p
                         className={"desc_title"}
                         id={"main_title"}
-                        style={{ fontWeight: 900 }}
+                        style={{ fontWeight: 900, marginBottom: "0" }}
                     >
                         영화와 시리즈를 무제한으로.
                     </p>
                     <br />
-                    <p className={"desc"} id={"main_desc"}>
+                    <p
+                        className={"desc"}
+                        id={"main_desc"}
+                        style={{ marginTop: "0", marginBottom: "0" }}
+                    >
                         다양한 디바이스에서 시청하세요. 언제든 해지하실 수
                         있습니다.
                     </p>
@@ -97,7 +129,7 @@ function BeforePage() {
                     <p
                         className={"desc_lower"}
                         id={"main_desc_lower"}
-                        style={{ marginBottom: "20px" }}
+                        style={{ marginBottom: "20px", marginTop: "0" }}
                     >
                         시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면
                         이메일 주소를 입력하세요.
@@ -122,10 +154,12 @@ function BeforePage() {
                                 height: "60px",
                                 backgroundColor: "red",
                                 color: "white",
+                                fontSize: "30px",
+                                border: "0px",
                             }}
                             box-sizing="border-box"
                         >
-                            시작하기
+                            시작하기 >
                         </button>
                     </form>
                 </div>
@@ -211,7 +245,9 @@ function BeforePage() {
             </div>
 
             <div id="main_6">
-                <p className="desc_title">자주 묻는 질문</p>
+                <p className="desc_title" style={{ marginBottom: "50px" }}>
+                    자주 묻는 질문
+                </p>
                 <input type="radio" name="accordion" id="answer01" />
                 <label className="faq_question" for="answer01">
                     <p className="ques-title">넷플릭스란 무엇인가요?</p>
@@ -260,7 +296,42 @@ function BeforePage() {
                         어디서든 함께니까요.
                     </p>
                 </div>
-
+                <p
+                    className={"desc_lower"}
+                    id={"main_desc_lower"}
+                    style={{ marginBottom: "20px", marginTop: "100px" }}
+                >
+                    시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면
+                    이메일 주소를 입력하세요.
+                </p>
+                <form className={"input_email"} onSubmit={email_print}>
+                    <input
+                        type="email"
+                        name="email_input"
+                        required
+                        id="email_input"
+                        placeholder="이메일 주소"
+                        style={{
+                            width: "450px",
+                            height: "60px",
+                            boxSizing: "border-box",
+                        }}
+                    />
+                    <button
+                        type="submit"
+                        style={{
+                            width: "166px",
+                            height: "60px",
+                            backgroundColor: "red",
+                            color: "white",
+                            fontSize: "30px",
+                            border: "0px",
+                        }}
+                        box-sizing="border-box"
+                    >
+                        시작하기 >
+                    </button>
+                </form>
                 {/* <ul className="faq_list">
           <li className="faq_list_item what_is_netfilx">
             <button className="faq_question" onClick="showQna">
@@ -312,22 +383,27 @@ function BeforePage() {
             </div>
             <footer>
                 <div className="footer_box">
+                    <p style={{ marginLeft: "40px", color: "#757575" }}>
+                        질문이 있으신가요? 문의전화: 090-001-9587
+                    </p>
                     <ul className="footer_box_ul">
                         <li className="footer-link-item">자주 묻는 질문</li>
-                        <li className="footer-link-item">투자정보</li>
-                        <li className="footer-link-item">개인정보</li>
-                        <li className="footer-link-item">속도 테스트</li>
                         <li className="footer-link-item">고객센터</li>
-                        <li className="footer-link-item"></li>
-                        <li className="footer-link-item"></li>
-                        <li className="footer-link-item"></li>
-                        <li className="footer-link-item"></li>
-                        <li className="footer-link-item"></li>
-                        <li className="footer-link-item"></li>
-                        <li className="footer-link-item"></li>
-                        <li className="footer-link-item"></li>
-                        <li className="footer-link-item"></li>
-                        <li className="footer-link-item"></li>
+                        <li className="footer-link-item">계정</li>
+                        <li className="footer-link-item">미디어 센터</li>
+                        <li className="footer-link-item">투자 정보(IR)</li>
+                        <li className="footer-link-item">입사 정보</li>
+                        <li className="footer-link-item">
+                            넷플릭스 지원 디바이스
+                        </li>
+                        <li className="footer-link-item">이용 약관</li>
+                        <li className="footer-link-item">개인정보</li>
+                        <li className="footer-link-item">쿠키 설정</li>
+                        <li className="footer-link-item">회사 정보</li>
+                        <li className="footer-link-item">문의하기</li>
+                        <li className="footer-link-item">속도 테스트</li>
+                        <li className="footer-link-item">법적 고지</li>
+                        <li className="footer-link-item">오직 넷플릭스에서</li>
                     </ul>
                 </div>
             </footer>

@@ -24,6 +24,8 @@ header div{
 #main_1_img{
     position: absolute;
     top:-10%;
+    height: 800px;
+    
 }
 
 #logo_B{
@@ -83,8 +85,10 @@ p{
 
 .desc_title{
     font-size: 50px;
-    line-height:120%;
+    /* line-height:120%; */
     font-weight: 900;
+    margin-bottom: 0px;
+
 }
 .desc{
     font-size: 26px;
@@ -95,6 +99,7 @@ p{
 #main_1 {
     position: relative;
     opacity: 90%;
+    height: 60vh;
 }
 #_1_desc{
     margin: auto;
@@ -147,13 +152,14 @@ p{
     width: 845px;    
 }
 .footer_box{
-    /* padding: 100px 300px 100px 300px; */
+    padding: 50px 350px 100px 260px;
     margin-left: 8vw;
     margin-top: 3vw;
     box-sizing: border-box;
+    color: #757575;
 }
 .footer_box_ul{
-    color: white;
+    margin-top: 40px;
     display: grid;
     grid-template-columns:repeat(4, 1fr);
     grid-gap: 20px;
@@ -209,9 +215,7 @@ input[id*="answer"]:checked + label + div {
 }
 
 
-#_1_img{
-	height: 800px;
-}
+
 
 
 #login_button{
@@ -301,4 +305,28 @@ input[id*="answer"]:checked + label + div {
         grid-template-columns:repeat(3, 1fr);
 
     }
+}
+
+#main_1, #main_2, #main_3, #main_4, #main_5, #main_6{
+    border-bottom: 8px solid rgb(34, 34, 34);
+}
+#main_6{
+    padding-bottom: 100px;
+}
+
+
+#_1_img{
+	/* background: linear-gradient(to bottom, rgba(0,0,0,0), black), */
+    background: linear-gradient(black , rgba(0,0,0,0), black),
+	url(https://assets.nflxext.com/ffe/siteui/vlv3/ddd4085b-8ed5-416a-9b80-5085784ba0e9/5e3ba062-2e50-4086-8d83-65bbe3c485c1/KR-ko-20211206-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+	background-size: 100vw;
+}
+
+
+#main_desc{
+    margin-top: 0;
+}
+
+li{
+    list-style:none;
 }
