@@ -127,88 +127,202 @@ function MainTvComp() {
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXrQ1BQrp6M3VY1jTFEMlNgCOX3pAYBA8ScFSvJQqJpTvviEZ574oScpRJBApsvzriao8rpAeisWVYsCdA-J9aCBSyTJN35LU7JafNaT746TTsitvLYJWYJ8pluDe5cdFhJ8uutyuQzychH6I-ejRmoXXLDnq2_qWoJQqlQq0Y15FYr1hqLRkMj8KUwu.webp?r=831",
                 title: "그해 우리는",
                 desc: "로맨스",
+                wished: false,
+                ageAndSeason: "전체이용가 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "2",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZjS94Q--6oi11hLJhJo2RhY8z-rJMTBfMlM6ScrtNnPc4zpiNWqdskdA5S0APnDMpOR6Xwvi735lZNHhCyqc8UZXojfs8eDyZBKqglzDmFetP0j6WPmK6obZihN.jpg?r=08a",
                 title: "로스트 인 스페이스",
                 desc: "SF",
+                wished: false,
+                ageAndSeason: "15세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "3",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRdVd6vHTHsyEQc59DfUhnFjpIHQ_2cLnwLcAsogjTNANsN_EH9ih-DeFgYlleyV4rcmKX1B9q9aUsasZ131rf0lqlQ2wWSkJ19luIRArkpWRarabNWD5Hd7rh4WOAbRQbn4gHjo-RTfpkdSScvObp9E--qtKWq-0x8vD_jGLff2qW9XRdku9LnhMRRr.webp?r=452",
                 title: "불가살",
                 desc: "괴이",
+                wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "저주받은 몸으로 태어나 불사의 존재가 된 남자. 이제 600년간 이어진 복수의 여정을 끝내고 자신의 영혼을 되찾으려 한다.",
             },
             {
                 index: "4",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABR0LdJzo0XvyB23PuEWfclx9FZVlLu-YtkX55SUJ9mIiEY2I7yIayN6tBT-RLYFKhh59eZb6SL-bE-QkklN-2-p3RJdnyOQmfKUbDEsik6afmKS9W3-IfN9z9kq3.jpg?r=369",
                 title: "더블타겟",
                 desc: "첩보",
+                wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "해병대 출신의 퇴역한 명사수 밥 리는 대통령 암살 음모를 저지해달라는 백악관의 요청을 받고 현업에 복귀하지만 곧 살인 누명을 쓰고 만다.",
             },
             {
                 index: "5",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcWFB8Qh3uQ4n_mhGVxMp0EyPbEfRhaZf1nypV7N33IwfK4I1eIJ4WgcPpeAuEynLBlSJPtL-4EFjI2PYxVTTUo037o_A0wU5WfBgE8xn2N585b5l2rLfy7ZKI_Hp-zqVPFCtgNkQ6A5e7VYcaEHjA7gDLlPhIvNVKMG4Dq9VMiDpOopm2NkeW03Xrkh1Qs3SGEIyGzAUSDsVHi1BNmf3htw.jpg?r=788",
                 title: "솔로지옥",
                 desc: "달달",
+                wished: false,
+                ageAndSeason: "15세 시즌 1개",
+                describe:
+                    "매력적인 싱글 남녀가 무인도에 갇혔다. 누군가와 커플이 되는 게 유일한 탈출 방법. 근데 커플들이 '천국도'로 이동해 밤을 불태울 때, 솔로는 '지옥도'에 남아 자급자족해야 한다고?",
             },
             {
                 index: "6",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABf_5K8OTBMrZQcpfCcYWXdxD3UE5XKOxcIq8mvX7eBIOCEAw2JD1U4dc54RS1HNQZN9VcB4PDv8R5z1p0Mxe9fdJR-sbjkf2ElV39wbWiku2Po3rObpd6n9-sLDA.jpg?r=b45",
                 title: "마이네임",
                 desc: "격투",
+                wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "아빠를 잃었다. 그것도 바로 눈앞에서. 남은 딸은 결심한다. 반드시 내 손으로 복수하겠노라고. 목표를 위해서라면 방법은 상관없다. 마약 조직의 언더커버가 되어 경찰에 잠입하는 것이라 해도.",
             },
             {
                 index: "7",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcAfVwM_UQ-8HLReFHoCTqhd97pa10An2t-LgSrfYXjvWuJHm86bj-hmBK5aXfs9pOdBInqGJtaJfNj8sOdy1gpi9q7DpflOYyRE9iU6ril3eRK_tF2RHGUMk2Dy0P9-1c5ROXU3oPxEtFWGm5qaCN7Axy3bKNbR6nVhvgPVD6wTBezyWFm6B_psbN9T0yxjxAcmBPCPtE-memGlOHUNLUam.jpg?r=15d",
                 title: "에밀리 파리에 가다",
                 desc: "뭘까이건",
+                wished: false,
+                ageAndSeason: "12세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "8",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdLz78qXJWNiie-2lf1foN5Z98ZQ-0hmUNj15KIMMckgxRQZQVjchx1FhhESueojKCjUhlAdJDGWK4SU2riZQ4a3E7sc1ol335Xlksk-X378lU9rHeUMKkuv_gWv.jpg?r=157",
                 title: "종이의 집",
                 desc: "인기짱",
+                wished: false,
+                ageAndSeason: "18세 시즌 5개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "9",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABT_bVcdgbT53vxz33vp5V1zSNvQ2n2BfjhUuAWHaOq3_i-EgjP_6_5rzxC_aRMGJ3V_3yNi1RdAd7CJMCUFvPVNUudCQ4n-VghpHuQLtVYRvMmocRhvZIcxQyWIg.jpg?r=62a",
                 title: "마블 아이언피스트",
                 desc: "마.블.",
+                wished: false,
+                ageAndSeason: "18세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "10",
                 src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcxDyYqsi0_vUDEb593aBMkY5l_wHGwQkCnuJqVOEoloeRLs8H5XI7IC57lC6Dj-pPOv-0x_dXVGOru8YVzVNmINAOs.webp?r=43c",
                 title: "플래시",
                 desc: "디.씨.",
+                wished: false,
+                ageAndSeason: "18세 시즌 5개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
         ]);
         setBlockbusterContents([
             {
                 index: "1",
-                src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcierLxhc-d_iIUgnGOqUU_BTLgkSPcJeLgsNMYq3MmhEkYIMuoKXAddGYkP6f5vWQPIZUm9_s0wBcQvaGqLZEywtuBK4M8m9tS_hNe8O2b91lVP_uTMjB-3rn6OjxAPi5Q9KsCV0pbnAyAP6naMUaKuDVQAGshmoL7MOthwXoiiVy7UXBhVgos.jpg?r=cbd",
-                title: "아케인",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABXrQ1BQrp6M3VY1jTFEMlNgCOX3pAYBA8ScFSvJQqJpTvviEZ574oScpRJBApsvzriao8rpAeisWVYsCdA-J9aCBSyTJN35LU7JafNaT746TTsitvLYJWYJ8pluDe5cdFhJ8uutyuQzychH6I-ejRmoXXLDnq2_qWoJQqlQq0Y15FYr1hqLRkMj8KUwu.webp?r=831",
+                title: "그해 우리는",
+                desc: "로맨스",
+                wished: false,
+                ageAndSeason: "전체이용가 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "2",
-                src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVP1nhY92OjXJ2236yl0-GUVJK_jUzSpcJUF7VIMTD6RhjFGAzavpHlbwcWVV1rCS5NEoDSDPXLQYcvAP3XbgBHEhMpoeAR1xA_zCNUktmFrfgO4SgP7kyXTl12u7fH4q_XzjejpFHrWlw7Eye_9dXOh7e3kaGmfWPEvTajHXwbUZD3WNPsUU5M.jpg?r=b45",
-                title: "마이네임",
-            },
-            {
-                src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQw4x67ePluiVqxJDubRlwPiu-X8prhErG1xVicrPhlZbExfiw4U3QVS9rKHtuPOR3vAGUPbTFMQsSGC_52VsV1LJeaFVrHdbEdCWsSP-XZgkNpRuva8PNYVU9sde9fjRr4jYqQzYAZsJuZhitL2nMzfImE.webp?r=ebb",
-                title: "싱크홀",
-            },
-            {
-                src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbRimFoshBDFc5ebs3TXbgMP9qctTPHLzPQ7O2i2LLWdBz7zFhO9Ms5cPZPWmF133AYpF1aDId1zPUClOgQLqs7pMUA.webp?r=c75",
-                title: "프리즌 브레이크",
-            },
-            {
-                src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABROzB4UrA2hplCOUBtwplePj2-vinbbYmuRMYNrkil00kryIpTfoozQWOVzviATkJjK9bxg___XFZbPBWjL3uaZkV30HUtWCCltF9ujagxO2aPlZaHNG3a7pCDAZ.jpg?r=f37",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZjS94Q--6oi11hLJhJo2RhY8z-rJMTBfMlM6ScrtNnPc4zpiNWqdskdA5S0APnDMpOR6Xwvi735lZNHhCyqc8UZXojfs8eDyZBKqglzDmFetP0j6WPmK6obZihN.jpg?r=08a",
                 title: "로스트 인 스페이스",
+                desc: "SF",
+                wished: false,
+                ageAndSeason: "15세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
-                src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeidbTI7C_3mB-Fl3gIFnKAGd6awhF23c5e8KMWxY47irfDBZ4AGdwTvGpYs1ne0jiqIMxSSJRhDNQyXYNebutYaV5IrnWY0TtzRCpsnjg0-vG5BI6b7OjNP_EJK.jpg?r=229",
-                title: "카우보이 비밥",
+                index: "3",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRdVd6vHTHsyEQc59DfUhnFjpIHQ_2cLnwLcAsogjTNANsN_EH9ih-DeFgYlleyV4rcmKX1B9q9aUsasZ131rf0lqlQ2wWSkJ19luIRArkpWRarabNWD5Hd7rh4WOAbRQbn4gHjo-RTfpkdSScvObp9E--qtKWq-0x8vD_jGLff2qW9XRdku9LnhMRRr.webp?r=452",
+                title: "불가살",
+                desc: "괴이",
+                wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "저주받은 몸으로 태어나 불사의 존재가 된 남자. 이제 600년간 이어진 복수의 여정을 끝내고 자신의 영혼을 되찾으려 한다.",
+            },
+            {
+                index: "4",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABR0LdJzo0XvyB23PuEWfclx9FZVlLu-YtkX55SUJ9mIiEY2I7yIayN6tBT-RLYFKhh59eZb6SL-bE-QkklN-2-p3RJdnyOQmfKUbDEsik6afmKS9W3-IfN9z9kq3.jpg?r=369",
+                title: "더블타겟",
+                desc: "첩보",
+                wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "해병대 출신의 퇴역한 명사수 밥 리는 대통령 암살 음모를 저지해달라는 백악관의 요청을 받고 현업에 복귀하지만 곧 살인 누명을 쓰고 만다.",
+            },
+            {
+                index: "5",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcWFB8Qh3uQ4n_mhGVxMp0EyPbEfRhaZf1nypV7N33IwfK4I1eIJ4WgcPpeAuEynLBlSJPtL-4EFjI2PYxVTTUo037o_A0wU5WfBgE8xn2N585b5l2rLfy7ZKI_Hp-zqVPFCtgNkQ6A5e7VYcaEHjA7gDLlPhIvNVKMG4Dq9VMiDpOopm2NkeW03Xrkh1Qs3SGEIyGzAUSDsVHi1BNmf3htw.jpg?r=788",
+                title: "솔로지옥",
+                desc: "달달",
+                wished: false,
+                ageAndSeason: "15세 시즌 1개",
+                describe:
+                    "매력적인 싱글 남녀가 무인도에 갇혔다. 누군가와 커플이 되는 게 유일한 탈출 방법. 근데 커플들이 '천국도'로 이동해 밤을 불태울 때, 솔로는 '지옥도'에 남아 자급자족해야 한다고?",
+            },
+            {
+                index: "6",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABf_5K8OTBMrZQcpfCcYWXdxD3UE5XKOxcIq8mvX7eBIOCEAw2JD1U4dc54RS1HNQZN9VcB4PDv8R5z1p0Mxe9fdJR-sbjkf2ElV39wbWiku2Po3rObpd6n9-sLDA.jpg?r=b45",
+                title: "마이네임",
+                desc: "격투",
+                wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "아빠를 잃었다. 그것도 바로 눈앞에서. 남은 딸은 결심한다. 반드시 내 손으로 복수하겠노라고. 목표를 위해서라면 방법은 상관없다. 마약 조직의 언더커버가 되어 경찰에 잠입하는 것이라 해도.",
+            },
+            {
+                index: "7",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcAfVwM_UQ-8HLReFHoCTqhd97pa10An2t-LgSrfYXjvWuJHm86bj-hmBK5aXfs9pOdBInqGJtaJfNj8sOdy1gpi9q7DpflOYyRE9iU6ril3eRK_tF2RHGUMk2Dy0P9-1c5ROXU3oPxEtFWGm5qaCN7Axy3bKNbR6nVhvgPVD6wTBezyWFm6B_psbN9T0yxjxAcmBPCPtE-memGlOHUNLUam.jpg?r=15d",
+                title: "에밀리 파리에 가다",
+                desc: "뭘까이건",
+                wished: false,
+                ageAndSeason: "12세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
+            },
+            {
+                index: "8",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABdLz78qXJWNiie-2lf1foN5Z98ZQ-0hmUNj15KIMMckgxRQZQVjchx1FhhESueojKCjUhlAdJDGWK4SU2riZQ4a3E7sc1ol335Xlksk-X378lU9rHeUMKkuv_gWv.jpg?r=157",
+                title: "종이의 집",
+                desc: "인기짱",
+                wished: false,
+                ageAndSeason: "18세 시즌 5개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
+            },
+            {
+                index: "9",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABT_bVcdgbT53vxz33vp5V1zSNvQ2n2BfjhUuAWHaOq3_i-EgjP_6_5rzxC_aRMGJ3V_3yNi1RdAd7CJMCUFvPVNUudCQ4n-VghpHuQLtVYRvMmocRhvZIcxQyWIg.jpg?r=62a",
+                title: "마블 아이언피스트",
+                desc: "마.블.",
+                wished: false,
+                ageAndSeason: "18세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
+            },
+            {
+                index: "10",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcxDyYqsi0_vUDEb593aBMkY5l_wHGwQkCnuJqVOEoloeRLs8H5XI7IC57lC6Dj-pPOv-0x_dXVGOru8YVzVNmINAOs.webp?r=43c",
+                title: "플래시",
+                desc: "디.씨.",
+                wished: false,
+                ageAndSeason: "18세 시즌 5개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
         ]);
 
@@ -361,32 +475,100 @@ function MainTvComp() {
                 src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcierLxhc-d_iIUgnGOqUU_BTLgkSPcJeLgsNMYq3MmhEkYIMuoKXAddGYkP6f5vWQPIZUm9_s0wBcQvaGqLZEywtuBK4M8m9tS_hNe8O2b91lVP_uTMjB-3rn6OjxAPi5Q9KsCV0pbnAyAP6naMUaKuDVQAGshmoL7MOthwXoiiVy7UXBhVgos.jpg?r=cbd",
                 title: "아케인",
                 desc: "흥미진진",
+                wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "고아가 된 자매 바이와 파우더. 호화로운 필트오버에 도둑질을 하러 간다. 이로 인해 자운의 지하 거리에 문젯거리를 끌어들이게 되고.",
             },
             {
                 index: "2",
                 src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVP1nhY92OjXJ2236yl0-GUVJK_jUzSpcJUF7VIMTD6RhjFGAzavpHlbwcWVV1rCS5NEoDSDPXLQYcvAP3XbgBHEhMpoeAR1xA_zCNUktmFrfgO4SgP7kyXTl12u7fH4q_XzjejpFHrWlw7Eye_9dXOh7e3kaGmfWPEvTajHXwbUZD3WNPsUU5M.jpg?r=b45",
                 title: "마이네임",
-                desc: "재미남",
+                desc: "격투",
+                wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "아빠를 잃었다. 그것도 바로 눈앞에서. 남은 딸은 결심한다. 반드시 내 손으로 복수하겠노라고. 목표를 위해서라면 방법은 상관없다. 마약 조직의 언더커버가 되어 경찰에 잠입하는 것이라 해도.",
             },
             {
+                index: "3",
                 src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQw4x67ePluiVqxJDubRlwPiu-X8prhErG1xVicrPhlZbExfiw4U3QVS9rKHtuPOR3vAGUPbTFMQsSGC_52VsV1LJeaFVrHdbEdCWsSP-XZgkNpRuva8PNYVU9sde9fjRr4jYqQzYAZsJuZhitL2nMzfImE.webp?r=ebb",
                 title: "싱크홀",
                 desc: "공포",
+                wished: false,
+                ageAndSeason: "12세 시즌 1개",
+                describe:
+                    "서울 한복판에 발생한 거대 싱크홀. 빌라 한 동이 통째로 땅속으로 꺼져 버렸다. 폭우로 인한 추가 붕괴가 우려되는 상황, 더 큰 일 나기 전에 나가야 한다. 저기요, 우리 좀 꺼내주세요!",
             },
             {
+                index: "4",
                 src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbRimFoshBDFc5ebs3TXbgMP9qctTPHLzPQ7O2i2LLWdBz7zFhO9Ms5cPZPWmF133AYpF1aDId1zPUClOgQLqs7pMUA.webp?r=c75",
                 title: "프리즌 브레이크",
                 desc: "쫄깃쫄깃",
+                wished: false,
+                ageAndSeason: "18세 시즌 7개",
+                describe:
+                    "형이 억울하게 살인 누명을 쓰고 수감되자 구조 공학자인 주인공은 악명 높은 폭스 리버 주립 교도소에서 형을 탈옥시키기로 결심한다.",
             },
             {
+                index: "5",
                 src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABROzB4UrA2hplCOUBtwplePj2-vinbbYmuRMYNrkil00kryIpTfoozQWOVzviATkJjK9bxg___XFZbPBWjL3uaZkV30HUtWCCltF9ujagxO2aPlZaHNG3a7pCDAZ.jpg?r=f37",
                 title: "로스트 인 스페이스",
                 desc: "뭘까",
+                wished: false,
+                ageAndSeason: "18세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
+                index: "6",
                 src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeidbTI7C_3mB-Fl3gIFnKAGd6awhF23c5e8KMWxY47irfDBZ4AGdwTvGpYs1ne0jiqIMxSSJRhDNQyXYNebutYaV5IrnWY0TtzRCpsnjg0-vG5BI6b7OjNP_EJK.jpg?r=229",
                 title: "카우보이 비밥",
                 desc: "이건 뭘까",
+                wished: false,
+                ageAndSeason: "15세 시즌 1개",
+                describe:
+                    "스타일은 차고 넘치는데 주머니는 텅텅 비었다. 돈을 벌기 위해 태양계를 누비며 범죄자를 쫓는 현상금 사냥꾼 스파이크, 제트, 페이. 세 사람은 스파이크의 과거로부터 도망칠 수 있을까?",
+            },
+            {
+                index: "7",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZjS94Q--6oi11hLJhJo2RhY8z-rJMTBfMlM6ScrtNnPc4zpiNWqdskdA5S0APnDMpOR6Xwvi735lZNHhCyqc8UZXojfs8eDyZBKqglzDmFetP0j6WPmK6obZihN.jpg?r=08a",
+                title: "로스트 인 스페이스",
+                desc: "SF",
+                wished: false,
+                ageAndSeason: "18세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
+            },
+            {
+                index: "8",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRdVd6vHTHsyEQc59DfUhnFjpIHQ_2cLnwLcAsogjTNANsN_EH9ih-DeFgYlleyV4rcmKX1B9q9aUsasZ131rf0lqlQ2wWSkJ19luIRArkpWRarabNWD5Hd7rh4WOAbRQbn4gHjo-RTfpkdSScvObp9E--qtKWq-0x8vD_jGLff2qW9XRdku9LnhMRRr.webp?r=452",
+                title: "불가살",
+                desc: "괴이",
+                wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "저주받은 몸으로 태어나 불사의 존재가 된 남자. 이제 600년간 이어진 복수의 여정을 끝내고 자신의 영혼을 되찾으려 한다.",
+            },
+            {
+                index: "8",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABR0LdJzo0XvyB23PuEWfclx9FZVlLu-YtkX55SUJ9mIiEY2I7yIayN6tBT-RLYFKhh59eZb6SL-bE-QkklN-2-p3RJdnyOQmfKUbDEsik6afmKS9W3-IfN9z9kq3.jpg?r=369",
+                title: "더블타겟",
+                desc: "첩보",
+                wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "해병대 출신의 퇴역한 명사수 밥 리는 대통령 암살 음모를 저지해달라는 백악관의 요청을 받고 현업에 복귀하지만 곧 살인 누명을 쓰고 만다.",
+            },
+            {
+                index: "10",
+                src: "https://occ-0-2219-1361.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABcWFB8Qh3uQ4n_mhGVxMp0EyPbEfRhaZf1nypV7N33IwfK4I1eIJ4WgcPpeAuEynLBlSJPtL-4EFjI2PYxVTTUo037o_A0wU5WfBgE8xn2N585b5l2rLfy7ZKI_Hp-zqVPFCtgNkQ6A5e7VYcaEHjA7gDLlPhIvNVKMG4Dq9VMiDpOopm2NkeW03Xrkh1Qs3SGEIyGzAUSDsVHi1BNmf3htw.jpg?r=788",
+                title: "솔로지옥",
+                desc: "달달",
+                wished: false,
+                ageAndSeason: "15세 시즌 1개",
+                describe:
+                    "매력적인 싱글 남녀가 무인도에 갇혔다. 누군가와 커플이 되는 게 유일한 탈출 방법. 근데 커플들이 '천국도'로 이동해 밤을 불태울 때, 솔로는 '지옥도'에 남아 자급자족해야 한다고?",
             },
         ]);
     }, 200);
@@ -428,6 +610,7 @@ function MainTvComp() {
                                 key={index}
                                 desc={content.desc}
                                 setViewMoreCheckOn={setViewMoreCheckOn}
+                                ageAndSeason={content.ageAndSeason}
                             />
                         ))}
                     </div>
@@ -463,6 +646,7 @@ function MainTvComp() {
                                 key={index}
                                 desc={content.desc}
                                 setViewMoreCheckOn={setViewMoreCheckOn}
+                                ageAndSeason={content.ageAndSeason}
                             />
                         ))}
                     </div>
@@ -498,6 +682,7 @@ function MainTvComp() {
                                 src={Top10Content.src}
                                 title={Top10Content.title}
                                 key={index}
+                                ageAndSeason={Top10Content.ageAndSeason}
                             />
                         ))}
                     </div>
@@ -540,6 +725,7 @@ function MainTvComp() {
                                 key={index}
                                 desc={HotNowContent.desc}
                                 setViewMoreCheckOn={setViewMoreCheckOn}
+                                ageAndSeason={HotNowContent.ageAndSeason}
                             />
                         ))}
                     </div>
@@ -574,6 +760,7 @@ function MainTvComp() {
                                 title={blockContent.title}
                                 key={index}
                                 setViewMoreCheckOn={setViewMoreCheckOn}
+                                ageAndSeason={blockContent.ageAndSeason}
                             />
                         ))}
                     </div>

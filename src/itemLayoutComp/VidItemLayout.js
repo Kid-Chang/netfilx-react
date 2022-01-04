@@ -35,7 +35,11 @@ function VidItemLayout({
     desc,
     setViewMoreCheckOn,
     wished,
+    ageAndSeason,
+    describe,
 }) {
+    setTimeout(() => {}, 200);
+
     const dispatch = useDispatch();
     const [wishCheck, setWishCheck] = useState(wished);
     const [PreviewCheckOn, setPreviewCheckOn] = useState(false);
@@ -71,7 +75,15 @@ function VidItemLayout({
     };
     const viewMoreClick = () => {
         setViewMoreCheckOn(true);
-        dispatch(loginAction({ src: src, title: title, desc: desc }));
+        dispatch(
+            loginAction({
+                src: src,
+                title: title,
+                desc: desc,
+                describe: describe,
+                ageAndSeason: ageAndSeason,
+            }),
+        );
     };
 
     const zoomOut = () => {
@@ -148,11 +160,27 @@ function VidItemLayout({
                     <div
                         style={{
                             position: "relative",
-                            top: "3vh",
+                            top: "2vh",
                             left: "15px",
                         }}
                     >
-                        {desc}
+                        <div style={{}}>
+                            <p style={{ display: "inline" }}>{ageAndSeason}</p>
+                            <p
+                                style={{
+                                    marginLeft: "10px",
+                                    border: "1px solid white",
+                                    display: "inline",
+                                    fontSize: "5px",
+                                    position: "relative",
+                                    top: "-1px",
+                                }}
+                            >
+                                HD
+                            </p>
+                            <br />
+                            {desc}
+                        </div>
                     </div>
                 </PreviewContainer>
             ) : null}

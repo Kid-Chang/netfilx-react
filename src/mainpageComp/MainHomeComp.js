@@ -12,21 +12,31 @@ export const LargeViewContainer = styled.div`
     height: 100%;
     z-index: 100;
     border-radius: 20px;
+
     & > div {
-        width: 850px;
+        overflow-y: scroll;
+        width: 865px;
         height: 90vh;
-        background-color: #181818;
-        position: fixed;
+        position: relative;
         left: calc(50% - 425px);
         top: 5vh;
+    }
+
+    & > div > div {
+        width: 850px;
+        height: 140vh;
+        background-color: #181818;
+        position: relative;
+        // left: calc(50% - 425px);
+        // top: 5vh;
         z-index: 30;
     }
-    & > div > img {
+    & > div > div > img {
         position: relative;
         top: -40px;
         width: 100%;
     }
-    & > div > div {
+    & > div > div > div {
         top: 12px;
         left: 790px;
         width: 40px;
@@ -38,7 +48,7 @@ export const LargeViewContainer = styled.div`
         color: white;
         line-height: 20px;
     }
-    & > div > div > i {
+    & > div > div > div > i {
         padding: 10px 0 0 14px;
     }
     & > label {
@@ -50,6 +60,16 @@ export const LargeViewContainer = styled.div`
         background: rgba(0, 0, 0, 0.9);
         z-index: 1;
     }
+`;
+
+const StoryDivStyle = styled.div`
+    border-top: 1px solid #303030;
+    border-bottom: 1px solid #303030;
+    width: 760px;
+    height: 136px;
+    position: relative;
+    left: 30px;
+    display: flex;
 `;
 
 function MainHomeComp() {
@@ -76,7 +96,7 @@ function MainHomeComp() {
     const LargeViewOff = () => {
         setViewMoreCheckOn(false);
     };
-
+    const [videoStories, setVideoStories] = useState();
     useEffect(() => {
         container_Carousel_Hot.current.style.transform = `translateX(${nowX_hot}vw)`;
         container_Carousel_Top.current.style.transform = `translateX(${nowX_top}vw)`;
@@ -87,9 +107,46 @@ function MainHomeComp() {
 
     //global state
     const { modalInfo } = useSelector((state) => state.ModalReducer);
-    const { src: modalSrc, title: modalTitle, desc: modalDesc } = modalInfo;
-
+    const {
+        src: modalSrc,
+        title: modalTitle,
+        desc: modalDesc,
+        describe: modalDescribe,
+        ageAndSeason: modalAgeAndSeason,
+    } = modalInfo;
     setTimeout(() => {
+        setVideoStories([
+            {
+                id: 1,
+                time: 48,
+                desc: "대낮에 도시 한복판에서 한 남자를 무자비하게 죽이는 괴생물체들. 새진리회 의장 정진수는 공포에 질린 시민들에게 설파한다. 죄지은 자들에게 지옥행이 선고된 것이라고.",
+            },
+            {
+                id: 2,
+                time: 53,
+                desc: "또 다른 지옥행이 예고되었다. 5일 후 죽는다는 신의 고지를 받고 정진수를 찾아간 박정자. 새진리회는 거액을 제안한다. 그 대가는? 지옥 시연을 생방송으로 중계하는 것.",
+            },
+            {
+                id: 3,
+                time: 53,
+                desc: "인간은 더욱 정의로워질 수 있습니다. 방송에서 신의 심판이 도래했음을 경고하는 정진수. 진경훈 형사가 가출한 딸을 찾는 동안 화살촉은 민혜진 변호사에게 응징을 가한다.",
+            },
+            {
+                id: 4,
+                time: 42,
+                desc: "무언가를 숨긴 채 사라진 동료를 찾아 나선 배영재 피디. 외진 낚시터에서 끔찍한 광경을 목격하고 아연실색한다. 한편, 전혀 예상치 못한 장소에서 천사의 예언이 전달된다.",
+            },
+            {
+                id: 5,
+                time: 55,
+                desc: "반드시 답을 찾아야 한다. 절망에 빠진 배영재는 간절한 마음으로 한 남자를 추적한다. 증발한 자들의 행적을 쫓던 새진리회. 소문으로 떠돌던 수상한 단체의 꼬리를 잡는다.",
+            },
+            {
+                id: 6,
+                time: 60,
+                desc: "세상에 알려지면 대혼란이 일어날 것이다. 다음 시연 당사자의 놀라운 정체를 알게 된 새진리회는 필사의 추적을 시작한다. 무슨 일이 있어도 시연의 공개를 막아야 한다.",
+            },
+        ]);
         setTvRisingNowContents([
             {
                 index: "1",
@@ -97,6 +154,9 @@ function MainHomeComp() {
                 title: "마이네임",
                 desc: "격투",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "아빠를 잃었다. 그것도 바로 눈앞에서. 남은 딸은 결심한다. 반드시 내 손으로 복수하겠노라고. 목표를 위해서라면 방법은 상관없다. 마약 조직의 언더커버가 되어 경찰에 잠입하는 것이라 해도.",
             },
             {
                 index: "2",
@@ -104,6 +164,9 @@ function MainHomeComp() {
                 title: "에밀리 파리에 가다",
                 desc: "뭘까이건",
                 wished: false,
+                ageAndSeason: "12세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "3",
@@ -111,6 +174,9 @@ function MainHomeComp() {
                 title: "종이의 집",
                 desc: "인기짱",
                 wished: false,
+                ageAndSeason: "18세 시즌 5개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "4",
@@ -118,6 +184,9 @@ function MainHomeComp() {
                 title: "마블 아이언피스트",
                 desc: "마.블.",
                 wished: false,
+                ageAndSeason: "18세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "5",
@@ -125,6 +194,9 @@ function MainHomeComp() {
                 title: "플래시",
                 desc: "디.씨.",
                 wished: false,
+                ageAndSeason: "18세 시즌 5개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "6",
@@ -132,6 +204,9 @@ function MainHomeComp() {
                 title: "그해 우리는",
                 desc: "로맨스",
                 wished: false,
+                ageAndSeason: "전체이용가 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "7",
@@ -139,6 +214,9 @@ function MainHomeComp() {
                 title: "로스트 인 스페이스",
                 desc: "SF",
                 wished: false,
+                ageAndSeason: "15세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "8",
@@ -146,6 +224,9 @@ function MainHomeComp() {
                 title: "불가살",
                 desc: "괴이",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "저주받은 몸으로 태어나 불사의 존재가 된 남자. 이제 600년간 이어진 복수의 여정을 끝내고 자신의 영혼을 되찾으려 한다.",
             },
             {
                 index: "8",
@@ -153,6 +234,9 @@ function MainHomeComp() {
                 title: "더블타겟",
                 desc: "첩보",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "해병대 출신의 퇴역한 명사수 밥 리는 대통령 암살 음모를 저지해달라는 백악관의 요청을 받고 현업에 복귀하지만 곧 살인 누명을 쓰고 만다.",
             },
             {
                 index: "10",
@@ -160,6 +244,9 @@ function MainHomeComp() {
                 title: "솔로지옥",
                 desc: "달달",
                 wished: false,
+                ageAndSeason: "15세 시즌 1개",
+                describe:
+                    "매력적인 싱글 남녀가 무인도에 갇혔다. 누군가와 커플이 되는 게 유일한 탈출 방법. 근데 커플들이 '천국도'로 이동해 밤을 불태울 때, 솔로는 '지옥도'에 남아 자급자족해야 한다고?",
             },
         ]);
 
@@ -170,6 +257,9 @@ function MainHomeComp() {
                 title: "그해 우리는",
                 desc: "로맨스",
                 wished: false,
+                ageAndSeason: "전체이용가 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "2",
@@ -177,6 +267,9 @@ function MainHomeComp() {
                 title: "로스트 인 스페이스",
                 desc: "SF",
                 wished: false,
+                ageAndSeason: "15세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "3",
@@ -184,6 +277,9 @@ function MainHomeComp() {
                 title: "불가살",
                 desc: "괴이",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "저주받은 몸으로 태어나 불사의 존재가 된 남자. 이제 600년간 이어진 복수의 여정을 끝내고 자신의 영혼을 되찾으려 한다.",
             },
             {
                 index: "4",
@@ -191,6 +287,9 @@ function MainHomeComp() {
                 title: "더블타겟",
                 desc: "첩보",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "해병대 출신의 퇴역한 명사수 밥 리는 대통령 암살 음모를 저지해달라는 백악관의 요청을 받고 현업에 복귀하지만 곧 살인 누명을 쓰고 만다.",
             },
             {
                 index: "5",
@@ -198,6 +297,9 @@ function MainHomeComp() {
                 title: "솔로지옥",
                 desc: "달달",
                 wished: false,
+                ageAndSeason: "15세 시즌 1개",
+                describe:
+                    "매력적인 싱글 남녀가 무인도에 갇혔다. 누군가와 커플이 되는 게 유일한 탈출 방법. 근데 커플들이 '천국도'로 이동해 밤을 불태울 때, 솔로는 '지옥도'에 남아 자급자족해야 한다고?",
             },
             {
                 index: "6",
@@ -205,6 +307,9 @@ function MainHomeComp() {
                 title: "마이네임",
                 desc: "격투",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "아빠를 잃었다. 그것도 바로 눈앞에서. 남은 딸은 결심한다. 반드시 내 손으로 복수하겠노라고. 목표를 위해서라면 방법은 상관없다. 마약 조직의 언더커버가 되어 경찰에 잠입하는 것이라 해도.",
             },
             {
                 index: "7",
@@ -212,6 +317,9 @@ function MainHomeComp() {
                 title: "에밀리 파리에 가다",
                 desc: "뭘까이건",
                 wished: false,
+                ageAndSeason: "12세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "8",
@@ -219,6 +327,9 @@ function MainHomeComp() {
                 title: "종이의 집",
                 desc: "인기짱",
                 wished: false,
+                ageAndSeason: "18세 시즌 5개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "9",
@@ -226,6 +337,9 @@ function MainHomeComp() {
                 title: "마블 아이언피스트",
                 desc: "마.블.",
                 wished: false,
+                ageAndSeason: "18세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "10",
@@ -233,6 +347,9 @@ function MainHomeComp() {
                 title: "플래시",
                 desc: "디.씨.",
                 wished: false,
+                ageAndSeason: "18세 시즌 5개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
         ]);
 
@@ -243,6 +360,9 @@ function MainHomeComp() {
                 title: "그해 우리는",
                 desc: "로맨스",
                 wished: false,
+                ageAndSeason: "전체이용가 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "2",
@@ -250,6 +370,9 @@ function MainHomeComp() {
                 title: "로스트 인 스페이스",
                 desc: "SF",
                 wished: false,
+                ageAndSeason: "15세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "3",
@@ -257,6 +380,9 @@ function MainHomeComp() {
                 title: "불가살",
                 desc: "괴이",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "저주받은 몸으로 태어나 불사의 존재가 된 남자. 이제 600년간 이어진 복수의 여정을 끝내고 자신의 영혼을 되찾으려 한다.",
             },
             {
                 index: "4",
@@ -264,6 +390,9 @@ function MainHomeComp() {
                 title: "더블타겟",
                 desc: "첩보",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "해병대 출신의 퇴역한 명사수 밥 리는 대통령 암살 음모를 저지해달라는 백악관의 요청을 받고 현업에 복귀하지만 곧 살인 누명을 쓰고 만다.",
             },
             {
                 index: "5",
@@ -271,6 +400,9 @@ function MainHomeComp() {
                 title: "솔로지옥",
                 desc: "달달",
                 wished: false,
+                ageAndSeason: "15세 시즌 1개",
+                describe:
+                    "매력적인 싱글 남녀가 무인도에 갇혔다. 누군가와 커플이 되는 게 유일한 탈출 방법. 근데 커플들이 '천국도'로 이동해 밤을 불태울 때, 솔로는 '지옥도'에 남아 자급자족해야 한다고?",
             },
             {
                 index: "6",
@@ -278,6 +410,9 @@ function MainHomeComp() {
                 title: "마이네임",
                 desc: "격투",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "아빠를 잃었다. 그것도 바로 눈앞에서. 남은 딸은 결심한다. 반드시 내 손으로 복수하겠노라고. 목표를 위해서라면 방법은 상관없다. 마약 조직의 언더커버가 되어 경찰에 잠입하는 것이라 해도.",
             },
             {
                 index: "7",
@@ -285,6 +420,9 @@ function MainHomeComp() {
                 title: "에밀리 파리에 가다",
                 desc: "뭘까이건",
                 wished: false,
+                ageAndSeason: "12세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "8",
@@ -292,6 +430,9 @@ function MainHomeComp() {
                 title: "종이의 집",
                 desc: "인기짱",
                 wished: false,
+                ageAndSeason: "18세 시즌 5개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "9",
@@ -299,6 +440,9 @@ function MainHomeComp() {
                 title: "마블 아이언피스트",
                 desc: "마.블.",
                 wished: false,
+                ageAndSeason: "18세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "10",
@@ -306,6 +450,9 @@ function MainHomeComp() {
                 title: "플래시",
                 desc: "디.씨.",
                 wished: false,
+                ageAndSeason: "18세 시즌 5개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
         ]);
 
@@ -459,13 +606,19 @@ function MainHomeComp() {
                 title: "아케인",
                 desc: "흥미진진",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "고아가 된 자매 바이와 파우더. 호화로운 필트오버에 도둑질을 하러 간다. 이로 인해 자운의 지하 거리에 문젯거리를 끌어들이게 되고.",
             },
             {
                 index: "2",
                 src: "https://occ-0-993-325.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVP1nhY92OjXJ2236yl0-GUVJK_jUzSpcJUF7VIMTD6RhjFGAzavpHlbwcWVV1rCS5NEoDSDPXLQYcvAP3XbgBHEhMpoeAR1xA_zCNUktmFrfgO4SgP7kyXTl12u7fH4q_XzjejpFHrWlw7Eye_9dXOh7e3kaGmfWPEvTajHXwbUZD3WNPsUU5M.jpg?r=b45",
                 title: "마이네임",
-                desc: "재미남",
+                desc: "격투",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "아빠를 잃었다. 그것도 바로 눈앞에서. 남은 딸은 결심한다. 반드시 내 손으로 복수하겠노라고. 목표를 위해서라면 방법은 상관없다. 마약 조직의 언더커버가 되어 경찰에 잠입하는 것이라 해도.",
             },
             {
                 index: "3",
@@ -473,6 +626,9 @@ function MainHomeComp() {
                 title: "싱크홀",
                 desc: "공포",
                 wished: false,
+                ageAndSeason: "12세 시즌 1개",
+                describe:
+                    "서울 한복판에 발생한 거대 싱크홀. 빌라 한 동이 통째로 땅속으로 꺼져 버렸다. 폭우로 인한 추가 붕괴가 우려되는 상황, 더 큰 일 나기 전에 나가야 한다. 저기요, 우리 좀 꺼내주세요!",
             },
             {
                 index: "4",
@@ -480,6 +636,9 @@ function MainHomeComp() {
                 title: "프리즌 브레이크",
                 desc: "쫄깃쫄깃",
                 wished: false,
+                ageAndSeason: "18세 시즌 7개",
+                describe:
+                    "형이 억울하게 살인 누명을 쓰고 수감되자 구조 공학자인 주인공은 악명 높은 폭스 리버 주립 교도소에서 형을 탈옥시키기로 결심한다.",
             },
             {
                 index: "5",
@@ -487,6 +646,9 @@ function MainHomeComp() {
                 title: "로스트 인 스페이스",
                 desc: "뭘까",
                 wished: false,
+                ageAndSeason: "18세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "6",
@@ -494,6 +656,9 @@ function MainHomeComp() {
                 title: "카우보이 비밥",
                 desc: "이건 뭘까",
                 wished: false,
+                ageAndSeason: "15세 시즌 1개",
+                describe:
+                    "스타일은 차고 넘치는데 주머니는 텅텅 비었다. 돈을 벌기 위해 태양계를 누비며 범죄자를 쫓는 현상금 사냥꾼 스파이크, 제트, 페이. 세 사람은 스파이크의 과거로부터 도망칠 수 있을까?",
             },
             {
                 index: "7",
@@ -501,6 +666,9 @@ function MainHomeComp() {
                 title: "로스트 인 스페이스",
                 desc: "SF",
                 wished: false,
+                ageAndSeason: "18세 시즌 2개",
+                describe:
+                    "지구보다 나은 삶을 향해 우주로 떠난 로빈슨 가족. 이주지로 향하던 도중 불시착하고 만다. 모든 것이 수상한 미지의 행성. 매 순간 새로운 위험에서 살아남아라!",
             },
             {
                 index: "8",
@@ -508,6 +676,9 @@ function MainHomeComp() {
                 title: "불가살",
                 desc: "괴이",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "저주받은 몸으로 태어나 불사의 존재가 된 남자. 이제 600년간 이어진 복수의 여정을 끝내고 자신의 영혼을 되찾으려 한다.",
             },
             {
                 index: "8",
@@ -515,6 +686,9 @@ function MainHomeComp() {
                 title: "더블타겟",
                 desc: "첩보",
                 wished: false,
+                ageAndSeason: "18세 시즌 1개",
+                describe:
+                    "해병대 출신의 퇴역한 명사수 밥 리는 대통령 암살 음모를 저지해달라는 백악관의 요청을 받고 현업에 복귀하지만 곧 살인 누명을 쓰고 만다.",
             },
             {
                 index: "10",
@@ -522,6 +696,9 @@ function MainHomeComp() {
                 title: "솔로지옥",
                 desc: "달달",
                 wished: false,
+                ageAndSeason: "15세 시즌 1개",
+                describe:
+                    "매력적인 싱글 남녀가 무인도에 갇혔다. 누군가와 커플이 되는 게 유일한 탈출 방법. 근데 커플들이 '천국도'로 이동해 밤을 불태울 때, 솔로는 '지옥도'에 남아 자급자족해야 한다고?",
             },
         ]);
     }, 100);
@@ -531,28 +708,175 @@ function MainHomeComp() {
             {viewMoreCheckOn ? (
                 <LargeViewContainer>
                     <div>
-                        <div onClick={() => LargeViewOff()}>
-                            <i class="fas fa-times"></i>
+                        <div>
+                            <div onClick={() => LargeViewOff()}>
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <img src={modalSrc} alt="" />
+                            <p
+                                style={{
+                                    fontSize: "3rem",
+                                    marginTop: "10px",
+                                    marginLeft: "60px",
+                                }}
+                            >
+                                {modalTitle}
+                            </p>
+                            <p
+                                style={{
+                                    marginTop: "0",
+                                    marginLeft: "20px",
+                                    position: "absolute",
+                                }}
+                            >
+                                <div style={{ marginLeft: "60px" }}>
+                                    {modalAgeAndSeason}
+                                </div>
+                                <p
+                                    style={{
+                                        position: "absolute",
+                                        left: "670px",
+                                        color: "#666666",
+                                        width: "50px",
+                                    }}
+                                >
+                                    장르:
+                                </p>
+                                <p
+                                    style={{
+                                        width: "100px",
+
+                                        position: "absolute",
+                                        left: "710px",
+                                    }}
+                                >
+                                    {modalDesc}
+                                </p>
+
+                                <br />
+                                <p
+                                    style={{
+                                        width: "600px",
+                                        marginLeft: "60px",
+                                    }}
+                                >
+                                    {modalDescribe}
+                                </p>
+                                <br />
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div
+                                                style={{
+                                                    display: "flex",
+                                                    justifyContent:
+                                                        "space-between",
+                                                    marginBottom: "30px",
+                                                }}
+                                            >
+                                                <div
+                                                    style={{
+                                                        fontWeight: "900",
+                                                        marginLeft: "30px",
+                                                    }}
+                                                >
+                                                    회차
+                                                </div>
+                                                <select
+                                                    style={{
+                                                        backgroundColor:
+                                                            "black",
+                                                        color: "white",
+                                                    }}
+                                                >
+                                                    <option>시즌 1</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        {videoStories.map(
+                                            (videoStory, index) => (
+                                                <StoryDivStyle key={index}>
+                                                    <div
+                                                        style={{
+                                                            display: "flex",
+                                                            marginRight: "20px",
+                                                            alignItems:
+                                                                "center",
+                                                        }}
+                                                    >
+                                                        <div
+                                                            style={{
+                                                                fontSize:
+                                                                    "1.5rem",
+                                                                marginRight:
+                                                                    "20px",
+                                                            }}
+                                                        >
+                                                            {videoStory.id}
+                                                        </div>
+                                                        <img
+                                                            src="http://placehold.it/135x76"
+                                                            alt=""
+                                                            style={{
+                                                                width: "135px",
+                                                                height: "76px",
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <div
+                                                        style={{
+                                                            display: "flex",
+                                                            flexDirection:
+                                                                "column",
+                                                            justifyContent:
+                                                                "center",
+                                                            width: "500px",
+                                                        }}
+                                                    >
+                                                        <div
+                                                            style={{
+                                                                display: "flex",
+                                                                justifyContent:
+                                                                    "space-between",
+                                                                alignItems:
+                                                                    "center",
+                                                                marginBottom:
+                                                                    "20px",
+                                                            }}
+                                                        >
+                                                            <div>
+                                                                {videoStory.id}
+                                                                화
+                                                            </div>
+
+                                                            <div>
+                                                                {
+                                                                    videoStory.time
+                                                                }
+                                                                분
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            style={{
+                                                                fontSize:
+                                                                    "14px",
+                                                                color: "#666666",
+                                                            }}
+                                                        >
+                                                            {videoStory.desc}
+                                                        </div>
+                                                    </div>
+                                                </StoryDivStyle>
+                                            ),
+                                        )}
+                                    </div>
+                                </div>
+                            </p>
                         </div>
-                        <img src={modalSrc} alt="" />
-                        <p
-                            style={{
-                                fontSize: "3rem",
-                                marginTop: "0",
-                                marginLeft: "20px",
-                            }}
-                        >
-                            {modalTitle}
-                        </p>
-                        <p
-                            style={{
-                                marginTop: "0",
-                                marginLeft: "20px",
-                            }}
-                        >
-                            장르: {modalDesc}
-                        </p>
                     </div>
+
                     <label onClick={() => LargeViewOff()}></label>
                 </LargeViewContainer>
             ) : null}
@@ -590,6 +914,8 @@ function MainHomeComp() {
                                 desc={content.desc}
                                 wished={content.wished}
                                 setViewMoreCheckOn={setViewMoreCheckOn}
+                                ageAndSeason={content.ageAndSeason}
+                                describe={content.describe}
                             />
                         ))}
                     </div>
@@ -635,6 +961,8 @@ function MainHomeComp() {
                                 desc={HotNowContent.desc}
                                 wished={HotNowContent.wished}
                                 setViewMoreCheckOn={setViewMoreCheckOn}
+                                ageAndSeason={HotNowContent.ageAndSeason}
+                                describe={HotNowContent.describe}
                             />
                         ))}
                     </div>
@@ -671,6 +999,8 @@ function MainHomeComp() {
                                 desc={blockContent.desc}
                                 wished={blockContent.wished}
                                 setViewMoreCheckOn={setViewMoreCheckOn}
+                                ageAndSeason={blockContent.ageAndSeason}
+                                describe={blockContent.describe}
                             />
                         ))}
                     </div>
@@ -707,6 +1037,8 @@ function MainHomeComp() {
                                 desc={content.desc}
                                 wished={content.wished}
                                 setViewMoreCheckOn={setViewMoreCheckOn}
+                                ageAndSeason={content.ageAndSeason}
+                                describe={content.describe}
                             />
                         ))}
                     </div>
@@ -743,6 +1075,8 @@ function MainHomeComp() {
                                 desc={content.desc}
                                 wished={content.wished}
                                 setViewMoreCheckOn={setViewMoreCheckOn}
+                                ageAndSeason={content.ageAndSeason}
+                                describe={content.describe}
                             />
                         ))}
                     </div>
