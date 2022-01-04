@@ -15,6 +15,8 @@ const ModalReducer = (state = initialState, action) => {
                     src: action.data.src,
                     title: action.data.title,
                     desc: action.data.desc,
+                    describe: action.data.describe,
+                    ageAndSeason: action.data.ageAndSeason,
                 },
             };
         }
